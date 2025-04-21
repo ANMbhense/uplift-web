@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reliable plumbing services with 24/7 emergency support. Affordable plumbing solutions for homes and businesses. Professional, licensed plumbers ready to help.">
+    <title>AquaFlow Plumbing | Reliable Plumbing & Emergency Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1e90ff;
+            --secondary-color: #1a1a1a;
+            --accent-color: #0077cc;
+            --text-color: #e0e0e0;
+            --dark-text: #121212;
+            --card-bg: #252525;
+            --footer-bg: #0d0d0d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--secondary-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--dark-text);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+            .logo span {
+                color: var(--accent-color);
+            }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+            .nav-links li {
+                margin-left: 30px;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: var(--text-color);
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+
+                .nav-links a:hover {
+                    color: var(--primary-color);
+                }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.postimg.cc/k5t1tMhm/Leonardo-Phoenix-10-Create-an-image-of-a-professional-black-c-1.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--text-color);
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--dark-text);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            .btn:hover {
+                background-color: var(--accent-color);
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(30, 144, 255, 0.3);
+            }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            color: var(--primary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+            .service-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+            .service-card ul li {
+                margin-bottom: 10px;
+                position: relative;
+                padding-left: 25px;
+            }
+
+                .service-card ul li:before {
+                    content: "\f00c";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    position: absolute;
+                    left: 0;
+                    color: var(--primary-color);
+                }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--card-bg);
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.postimg.cc/W3NZcXZH/Leonardo-Phoenix-10-Create-an-image-of-a-happy-family-in-their-3.jpg') no-repeat center center/cover;
+        }
+
+            .testimonials .section-title {
+                color: var(--text-color);
+            }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background-color: rgba(37, 37, 37, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+            .testimonial-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid var(--primary-color);
+        }
+
+        .testimonial-author h4 {
+            margin-bottom: 5px;
+        }
+
+        .testimonial-author p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .rating {
+            color: #ffc107;
+            margin-top: 10px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+            .pricing-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .pricing-card.featured {
+                background-color: var(--primary-color);
+                color: var(--dark-text);
+                transform: scale(1.05);
+            }
+
+                .pricing-card.featured .btn {
+                    background-color: var(--dark-text);
+                    color: var(--primary-color);
+                }
+
+                .pricing-card.featured .price {
+                    color: var(--dark-text);
+                }
+
+            .pricing-card h3 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+            .price span {
+                font-size: 16px;
+                font-weight: normal;
+            }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+            .pricing-features li {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #444;
+                color: #ccc;
+            }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--card-bg);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+            .about-text h3 {
+                font-size: 24px;
+                margin-bottom: 20px;
+                color: var(--accent-color);
+            }
+
+            .about-text p {
+                margin-bottom: 20px;
+            }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+            .about-image img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background-color: var(--primary-color);
+            color: var(--dark-text);
+            text-align: center;
+        }
+
+            .cta h2 {
+                margin-bottom: 20px;
+                font-size: 36px;
+            }
+
+            .cta p {
+                max-width: 700px;
+                margin: 0 auto 30px;
+                font-size: 18px;
+            }
+
+            .cta .btn {
+                background-color: var(--dark-text);
+                color: var(--primary-color);
+            }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--text-color);
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+            .footer-column ul li {
+                margin-bottom: 10px;
+            }
+
+                .footer-column ul li a {
+                    color: #aaa;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                }
+
+                    .footer-column ul li a:hover {
+                        color: var(--primary-color);
+                    }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+            .social-links a {
+                color: var(--text-color);
+                font-size: 20px;
+                transition: color 0.3s;
+            }
+
+                .social-links a:hover {
+                    color: var(--primary-color);
+                }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--footer-bg);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 40px;
+                transition: left 0.3s;
+            }
+
+                .nav-links.active {
+                    left: 0;
+                }
+
+                .nav-links li {
+                    margin: 15px 0;
+                }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                height: auto;
+                padding: 120px 0 60px;
+            }
+
+                .hero h1 {
+                    font-size: 28px;
+                }
+
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Aqua<span>Flow</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Reliable Plumbing Services You Can Trust</h1>
+                <p>24/7 emergency plumbing services with fast response times and affordable plumbing solutions for your home or business.</p>
+                <a href="#contact" class="btn">Request Emergency Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/fbhXBwRZ/Leonardo-Phoenix-10-Design-a-set-of-icons-representing-plumbin-0.jpg" class="service-icon" alt="Residential Plumbing Icon">
+                    <h3>Residential Plumbing</h3>
+                    <ul>
+                        <li>Leak detection & repair</li>
+                        <li>Pipe installation & repair</li>
+                        <li>Water heater services</li>
+                        <li>Drain cleaning</li>
+                        <li>Fixture installation</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get a Quote</a>
+                </div>
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/fbhXBwRZ/Leonardo-Phoenix-10-Design-a-set-of-icons-representing-plumbin-1.jpg" class="service-icon" alt="Commercial Plumbing Icon">
+                    <h3>Commercial Plumbing</h3>
+                    <ul>
+                        <li>Backflow prevention</li>
+                        <li>Sewer line services</li>
+                        <li>Grease trap cleaning</li>
+                        <li>Water main repair</li>
+                        <li>Bathroom remodeling</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get a Quote</a>
+                </div>
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/fbhXBwRZ/Leonardo-Phoenix-10-Design-a-set-of-icons-representing-plumbin-2.jpg" class="service-icon" alt="Emergency Services Icon">
+                    <h3>Emergency Services</h3>
+                    <ul>
+                        <li>24/7 availability</li>
+                        <li>Burst pipe repair</li>
+                        <li>Sewage backup</li>
+                        <li>Water heater failure</li>
+                        <li>Gas line leaks</li>
+                    </ul>
+                    <a href="tel:+18005551234" class="btn">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson" class="testimonial-img">
+                        <div class="testimonial-author">
+                            <h4>Sarah Johnson</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"AquaFlow provided reliable plumbing services when our water heater failed in the middle of winter. Their emergency team arrived within an hour and had us with hot water by the end of the day."</p>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="testimonial-img">
+                        <div class="testimonial-author">
+                            <h4>Michael Chen</h4>
+                            <p>Business Owner</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"The affordable plumbing solutions from AquaFlow saved our restaurant thousands when we had a major sewer line issue. Professional, clean, and efficient work every time."</p>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" class="testimonial-img">
+                        <div class="testimonial-author">
+                            <h4>Emily Rodriguez</h4>
+                            <p>Property Manager</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"We use AquaFlow for all our emergency plumbing services across 15 properties. Their response time is incredible and their work is always top-notch. Highly recommend!"</p>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic Service</h3>
+                    <div class="price">$89<span>/visit</span></div>
+                    <ul class="pricing-features">
+                        <li>Diagnostic fee</li>
+                        <li>Minor repairs</li>
+                        <li>Fixture installation</li>
+                        <li>1 hour labor included</li>
+                        <li>6-month warranty</li>
+                    </ul>
+                    <a href="#contact" class="btn">Book Now</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Emergency Service</h3>
+                    <div class="price">$149<span>/first hour</span></div>
+                    <ul class="pricing-features">
+                        <li>24/7 availability</li>
+                        <li>2-hour response time</li>
+                        <li>All emergency repairs</li>
+                        <li>Includes parts up to $100</li>
+                        <li>1-year warranty</li>
+                    </ul>
+                    <a href="tel:+18005551234" class="btn">Call Now</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Maintenance Plan</h3>
+                    <div class="price">$29<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Annual inspection</li>
+                        <li>Priority scheduling</li>
+                        <li>10% discount on repairs</li>
+                        <li>Drain cleaning</li>
+                        <li>Water heater check</li>
+                    </ul>
+                    <a href="#contact" class="btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Professional Plumbing Services Since 2005</h3>
+                    <p>AquaFlow Plumbing has been providing reliable plumbing services to residential and commercial clients for over 15 years. Our licensed plumbers are available 24/7 for emergency plumbing services.</p>
+                    <p>We pride ourselves on delivering affordable plumbing solutions without compromising on quality. Whether it's a leaky faucet or a major pipe burst, our team is equipped to handle all your plumbing needs.</p>
+                    <a href="#contact" class="btn">Schedule a Consultation</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.postimg.cc/8zvMRFDt/Leonardo-Phoenix-10-Create-a-group-photo-of-a-professional-plu-1.jpg" alt="AquaFlow Plumbing Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Need Reliable Plumbing Services?</h2>
+            <p>Contact us today for affordable plumbing solutions or emergency plumbing services. Our team is ready to help 24 hours a day, 7 days a week.</p>
+            <a href="tel:+18005551234" class="btn">Call Now: (800) 555-1234</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AquaFlow Plumbing</h3>
+                    <p>Providing reliable plumbing services and emergency plumbing services with affordable plumbing solutions since 2005.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Residential Plumbing</a></li>
+                        <li><a href="#">Commercial Plumbing</a></li>
+                        <li><a href="#">Emergency Services</a></li>
+                        <li><a href="#">Drain Cleaning</a></li>
+                        <li><a href="#">Water Heater Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Plumber St, Suite 100</li>
+                        <li><i class="fas fa-phone"></i> (800) 555-1234</li>
+                        <li><i class="fas fa-envelope"></i> info@aquaflow.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Emergency Service</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AquaFlow Plumbing. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
